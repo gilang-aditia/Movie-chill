@@ -7,11 +7,13 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <MovieRow title="upcoming" url={endpoints.upcoming} />
-      <MovieRow title="trending" url={endpoints.trending} />
-      <MovieRow title="top rated" url={endpoints.topRated} />
-      <MovieRow title="comedy" url={endpoints.comedy} />
-      <MovieRow title="popular" url={endpoints.popular} />
+      <MovieRow title="Continue watching the film" url={endpoints.popular} />
+      <MovieRow
+        title="top Today's Top Rating Films and Series"
+        url={endpoints.topRated}
+      />
+      <MovieRow title="Trending Movies" url={endpoints.trending} />
+      <MovieRow title="New Release" url={endpoints.popular} />
     </>
   );
 };

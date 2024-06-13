@@ -46,10 +46,12 @@ const Signup = () => {
                   type="confirmPassword"
                 />
                 <p className="my-0">
-                  <span className="text-gray-400">
+                  <span className="text-gray-400 text-xs">
                     Already have an account?
                   </span>
-                  <Link to="/login"> Login</Link>
+                  <Link className="text-xs" to="/login">
+                    Login
+                  </Link>
                 </p>
 
                 <button className="flex items-center  justify-center w-full p-2 my-5 text-white bg-gray-600 rounded-full shadow-md hover:bg-gray-800">
@@ -60,7 +62,7 @@ const Signup = () => {
 
                 <button className="flex items-center border border-gray-600 justify-center w-full p-2 my-5 text-white bg-black rounded-full shadow-md hover:bg-gray-800">
                   <FcGoogle className="mr-4" />
-                  Daftar dengan Google
+                  Sign Up with Google
                 </button>
               </form>
             </div>
