@@ -19,7 +19,7 @@ const MovieItem = ({ movie }) => {
           {movie.title}
         </p>
 
-        <p>
+        <p onClick={() => setLike(!like)}>
           {like ? (
             <FaHeart
               size={20}
