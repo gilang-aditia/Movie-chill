@@ -14,17 +14,6 @@
 </p>
 <br/>
 
-# Vite ⚡
-
-> Next Generation Frontend Tooling
-
-- 💡 Instant Server Start
-- ⚡️ Lightning Fast HMR
-- 🛠️ Rich Features
-- 📦 Optimized Build
-- 🔩 Universal Plugin Interface
-- 🔑 Fully Typed APIs
-
 <p align="center">
   <a href="https://ibb.co.com/y80k6td"><img src="https://i.ibb.co.com/JznpvVm/Chill-Movie.png" alt="Chill-Movie" border="0"></a>
 <a href="https://ibb.co.com/c8BSkmG"><img src="https://i.ibb.co.com/DMJHzqx/Chill-Movie-login.png" alt="Chill-Movie-login" border="0"></a>
@@ -33,4 +22,4 @@
 =======
 # Movie-chill
 Website Nonton
->>>>>>> 3934ff702b3b4f8a18018507e37bf2024fab482a
+created By Gilang
