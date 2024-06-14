@@ -43,7 +43,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-6xl font-nsans-bold">{title}</h1>
           <p className="text-gray-300 mt-2">{release_date}</p>
           <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[55%] mt-4 text-gray-200">
-            {truncate(overview, 800)}
+            {truncate(overview, 150)}
           </p>
           <div className="mt-6 mb-4 flex gap-4 items-center justify-between">
             <div className="flex gap-4">
