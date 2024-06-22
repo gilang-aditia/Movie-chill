@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Gambar from "../assets/img/bbb.jpg";
 import chill from "../assets/img/Logo-chill.png";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 const Signup = () => {
+  const [rememberLogin, setRememberLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(email, password, confirmpassword);
+  };
+
   return (
     <>
       <div className="w-full h-screen">
@@ -25,12 +35,16 @@ const Signup = () => {
               </h1>
               <p className="text-center mt-2">Welcome ! get to started</p>
 
-              <form className="w-full flex flex-col py-8">
+              <form
+                onSubmit={handleFormSubmit}
+                className="w-full flex flex-col py-8">
                 <input
                   className="p-2 my-2 bg-gray-800 rounded"
                   placeholder="Email"
                   autoComplete="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <input
@@ -38,15 +52,31 @@ const Signup = () => {
                   placeholder="Password"
                   autoComplete="current-password"
                   type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <input
                   className="p-2 my-2 bg-gray-800 rounded"
                   placeholder="Confirm Password"
                   autoComplete="current-password"
-                  type="confirmPassword"
+                  type="password"
+                  value={confirmpassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                 />
+                <div className="flex justify-between items-center text-xs mb-1 text-gray-400">
+                  <p>
+                    <input
+                      type="checkbox"
+                      className="mr-2"
+                      checked={rememberLogin}
+                      onChange={(e) => setRememberLogin(!rememberLogin)}
+                    />
+                    Remember me
+                  </p>
+                  <p>Need Help</p>
+                </div>
                 <p className="my-0">
-                  <span className="text-gray-400 text-xs">
+                  <span className="text-gray-400 text-xs mr-2">
                     Already have an account?
                   </span>
                   <Link className="text-xs" to="/login">

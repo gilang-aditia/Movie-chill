@@ -3,7 +3,7 @@ import Logo from "../assets/img/Logo-chill.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-gray-400 py-16 border-b border-b-slate-50">
+    <footer className="bg-gray-950 text-gray-400 py-16 border-t border-b-slate-50">
       <div className="container mx-auto px-4 flex flex-wrap justify-between">
         <div className="w-full sm:w-auto mb-6 sm:mb-0">
           <img className="w-40" src={Logo} alt="" />

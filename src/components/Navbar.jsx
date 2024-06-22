@@ -9,7 +9,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="absolute w-full p-4 flex justify-between items-center z-50 flex-wrap">
+    <div className="absolute w-full p-4 flex justify-between items-center bg-gradient-to-b from-black z-50 flex-wrap">
       <div className="flex items-center mb-2 md:mb-0">
         <Link to="/" className="mr-2 md:mr-8">
           <img
