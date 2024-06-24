@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Gambar from "../assets/img/bbb.jpg";
 import chill from "../assets/img/Logo-chill.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { UserAuth } from "../context/AuthContext";
 
 const Signup = () => {
   const [rememberLogin, setRememberLogin] = useState(true);
@@ -10,9 +11,18 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
 
-  const handleFormSubmit = (e) => {
+  const { user, signUp } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password, confirmpassword);
+
+    try {
+      await signUp(email, password, confirmpassword);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

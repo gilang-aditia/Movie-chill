@@ -1,17 +1,32 @@
 import React, { useState } from "react";
 import Gambar from "../assets/img/bbb.jpg";
 import chill from "../assets/img/Logo-chill.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { UserAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [rememberLogin, setRememberLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleFormSubmit = (e) => {
+  const { logIn } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    setError("");
+
+    try {
+      await logIn(email, password);
+      navigate("/");
+    } catch (error) {
+      setError(
+        "Failed to log in. Please check your credentials and try again."
+      );
+      console.log(error);
+    }
   };
   return (
     <>

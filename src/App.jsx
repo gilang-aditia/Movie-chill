@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { AuthContextProvider } from "./context/AuthContext";
 
 const App = () => {
   const location = useLocation();
@@ -22,14 +23,16 @@ const App = () => {
 
   return (
     <>
-      {!shouldHideNavbar() && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-      {!shouldHideFooter() && <Footer />}
+      <AuthContextProvider>
+        {!shouldHideNavbar() && <Navbar />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+        {!shouldHideFooter() && <Footer />}
+      </AuthContextProvider>
     </>
   );
 };
