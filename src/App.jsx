@@ -25,12 +25,14 @@ const App = () => {
     <>
       <AuthContextProvider>
         {!shouldHideNavbar() && <Navbar />}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
+        <div className="min-h-screen pb-5">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </div>
         {!shouldHideFooter() && <Footer />}
       </AuthContextProvider>
     </>
