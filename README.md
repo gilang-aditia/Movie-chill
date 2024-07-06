@@ -1,4 +1,46 @@
 
+# React Chill
+
+Web App Nonton film
+
+
+## Documentation
+
+## Deployment
+
+untuk melihat anda dapat mengujungi link berikut:
+
+```bash
+  https://react-chill-movie.web.app/
+```
+
+
+## Features
+
+- Daftar dan login
+- Menambahkan film Favorite
+- Menghapus Film Favorite
+
+
+
+## API Reference
+
+#### Get all items
+
+```http
+VITE_TMDB_KEY=5f6a4811ddf4e8be532d22c70793d278
+
+VITE_FIREBASE_API_KEY=AIzaSyAy59IX2qIljmRqqQia52imQxlGaXgFJ_k
+VITE_FIREBASE_AUTH_DOMAIN=react-chill-movie.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=react-chill-movie
+VITE_FIREBASE_STORAGE_BUCKET=react-chill-movie.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=291363625897
+VITE_FIREBASE_APP_ID=1:291363625897:web:ed7f7075be69d4accd82b8
+```
+NB : buat file .env dan tambahkan pada file .env anda !
+
+
+
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
     <img width="180" src="https://vitejs.dev/logo.svg" alt="Vite logo">
